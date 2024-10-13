@@ -13,13 +13,23 @@ class AuthField extends StatefulWidget {
 class _AuthFieldState extends State<AuthField> {
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      validator: (value){
+        if(value!.isEmpty){
+          return "${widget.hintText} is required";
+        }
+
+        return null;
+      },
       
     controller:  widget.controller,
     obscureText: widget.obscureText,
+    
     decoration: InputDecoration(
+      
+      
       hintText: widget.hintText,
-      contentPadding: EdgeInsets.all(15)
+      contentPadding: EdgeInsets.all(25)
     ),
     );
   }
