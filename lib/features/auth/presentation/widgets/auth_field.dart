@@ -19,7 +19,7 @@ class _AuthFieldState extends State<AuthField> {
     obscureText: widget.obscureText,
     decoration: InputDecoration(
       hintText: widget.hintText,
-      contentPadding: EdgeInsets.all(25)
+      contentPadding: EdgeInsets.all(15)
     ),
     );
   }
